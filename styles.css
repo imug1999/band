@@ -1,0 +1,138 @@
+/* 기본 스타일 초기화 및 배경 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* 컨테이너: 모든 요소를 가운데 정렬 */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px;
+    text-align: center;
+}
+
+/* 로고 스타일 */
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+/* 밴드 팀원 이름 스타일 */
+.members {
+    font-size: 0.8em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.status {
+    font-size: 1.4em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.countdown {
+    font-size: 0.8em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* 가로로 나열할 정보 컨테이너 */
+.info-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px; /* 두 그룹 사이 간격 */
+    width: 100%;
+    max-width: 600px; /* 최대 너비 제한 */
+    margin: 10px 0;
+}
+
+/* 공연 일자 그룹 */
+.date-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 공연 장소 그룹 */
+.venue-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 공연 일자 및 시간 스타일 */
+.date {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.time {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+/* 공연 장소 및 위치 스타일 */
+.venue {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.location {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.btn {
+    background-color: white; /* 흰색 배경 */
+    color: black; /* 검정 텍스트 */
+    padding: 5px 5px; /* 상하 10px, 좌우 20px 패딩 */
+    border: none; /* 기본 테두리 제거 */
+    font-size: 1em; /* 텍스트 크기 */
+    text-decoration: none; /* 밑줄 제거 */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 포스터 스타일 */
+.poster {
+    width: 500px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 모바일 반응형 설정 */
+@media (max-width: 600px) {
+    .logo {
+        width: 180px;
+    }
+
+    .members {
+        font-size: 0.8em;
+    }
+
+    .info-row {
+        flex-direction: column; /* 모바일에서는 세로로 쌓이게 */
+        gap: 10px;
+        align-items: center;
+    }
+
+    .date, .venue {
+        font-size: 1em;
+    }
+
+    .poster {
+        max-width: 80%;
+    }
+}
